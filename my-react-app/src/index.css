@@ -341,7 +341,7 @@ code {
 
 /* ─── Footer ──────────────────────────────────────────── */
 .site-footer {
-  background: linear-gradient(90deg, #0f3460 0%, #16213e 100%);
+  background: #212529;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
