@@ -24,7 +24,7 @@ function Navbar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav"> {/* i use link to para sa anchor states */}
+                <div className="collapse navbar-collapse" id="navbarNav"> {/* i use link to, para sa anchor states */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/" end>Home</NavLink>
