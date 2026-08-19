@@ -1,8 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container">
-                <a className="navbar-brand" href="#">
+                <NavLink className="navbar-brand" to="/">
                     <img
                         src="https://avatars.githubusercontent.com/u/278110208?s=400&u=7caed1f09f709f5317a196919d6f6a1916dceea0&v=4"
                         alt="My Avatar"
@@ -10,7 +12,7 @@ function Navbar() {
                         height="36"
                         style={{ borderRadius: "50%", objectFit: "cover" }}
                     />
-                </a>
+                </NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -22,16 +24,16 @@ function Navbar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
+                <div className="collapse navbar-collapse" id="navbarNav"> {/* i use link to para sa anchor states */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <NavLink className="nav-link" to="/" end>Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Features</a>
+                            <NavLink className="nav-link" to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <NavLink className="nav-link" to="/contact">Contact</NavLink>
                         </li>
                     </ul>
                 </div>
@@ -41,3 +43,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

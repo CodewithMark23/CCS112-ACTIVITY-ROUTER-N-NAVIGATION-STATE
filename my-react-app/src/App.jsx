@@ -1,6 +1,10 @@
+import { Routes, Route } from "react-router-dom"; //inimport yung react router
 import Navbar from "./Navbar.jsx";
 import Sidebar from "./Sidebar.jsx";
 import Footer from "./Footer.jsx";
+import Home from "./pages/Home.jsx"; // import the homes, about,contact
+import About from "./pages/About.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function App() {
     return (
@@ -10,9 +14,11 @@ function App() {
             <div className="d-flex">
                 <Sidebar />
 
-                <main className="p-4 flex-grow-1">
-                    <h1 className="mb-4">Welcome</h1>
-                </main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
 
             </div>
             <Footer />
