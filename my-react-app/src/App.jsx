@@ -14,7 +14,7 @@ function App() {
             <div className="d-flex">
                 <Sidebar />
 
-                <Routes> // routes na pupuntahan
+                <Routes> // routes na pupuntahan pag nag click
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
