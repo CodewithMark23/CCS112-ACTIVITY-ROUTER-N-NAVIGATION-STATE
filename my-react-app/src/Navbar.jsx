@@ -1,9 +1,20 @@
 import { NavLink } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ onSidebarToggle }) {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div className="container">
+            <div className="container-fluid px-3">
+                {/* Hamburger toggle for sidebar */}
+                <button
+                    className="btn btn-sm me-2"
+                    id="sidebar-hamburger"
+                    onClick={onSidebarToggle}
+                    aria-label="Toggle sidebar"
+                    title="Toggle sidebar"
+                >
+                    ☰
+                </button>
+
                 <NavLink className="navbar-brand" to="/">
                     <img
                         src="https://avatars.githubusercontent.com/u/278110208?s=400&u=7caed1f09f709f5317a196919d6f6a1916dceea0&v=4"

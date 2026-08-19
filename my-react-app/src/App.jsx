@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom"; //inimport yung react router
 import Navbar from "./Navbar.jsx";
 import Sidebar from "./Sidebar.jsx";
@@ -7,12 +8,17 @@ import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 
 function App() {
+    const [sidebarOpen, setSidebarOpen] = useState(true); // sidebar state
+
     return (
         <div className="d-flex flex-column min-vh-100">
-            <Navbar />
+            <Navbar onSidebarToggle={() => setSidebarOpen(!sidebarOpen)} />
 
             <div className="d-flex flex-grow-1">
-                <Sidebar />
+                {/* Sidebar wrapper — slides in/out */}
+                <div className={`sidebar-wrapper${sidebarOpen ? " sidebar-wrapper--open" : ""}`}>
+                    <Sidebar />
+                </div>
 
                 <div className="flex-grow-1 overflow-auto">
                     <Routes> {/* routes na pupuntahan pag nag click */}
