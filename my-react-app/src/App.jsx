@@ -8,21 +8,22 @@ import Contact from "./pages/Contact.jsx";
 
 function App() {
     return (
-        <>
+        <div className="d-flex flex-column min-vh-100">
             <Navbar />
 
-            <div className="d-flex">
+            <div className="d-flex flex-grow-1">
                 <Sidebar />
 
-                <Routes> // routes na pupuntahan pag nag click
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                </Routes>
-
+                <div className="flex-grow-1 overflow-auto">
+                    <Routes> {/* routes na pupuntahan pag nag click */}
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                </div>
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 
