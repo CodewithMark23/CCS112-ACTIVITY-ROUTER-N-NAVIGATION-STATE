@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="bg-dark text-white text-center py-4 mt-5">
+        <footer className="site-footer text-white text-center py-4">
             <div className="container">
                 <p className="mb-1">
                     © 2026 My App. All rights reserved.
